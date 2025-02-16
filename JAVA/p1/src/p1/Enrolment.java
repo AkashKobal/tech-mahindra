@@ -1,0 +1,49 @@
+package p1;
+
+import java.util.Objects;
+//
+public class Enrolment {
+	private String courseid;
+	private String sid;
+	
+	
+	public String getCourseid() {
+		return courseid;
+	}
+	public void setCourseid(String courseid) {
+		this.courseid = courseid;
+	}
+	public String getSid() {
+		return sid;
+	}
+	public void setSid(String sid) {
+		this.sid = sid;
+		
+		
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(courseid, sid);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Enrolment other = (Enrolment) obj;
+		return Objects.equals(courseid, other.courseid) && Objects.equals(sid, other.sid);
+	}
+	public Enrolment() {
+		
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+	
+
+}
