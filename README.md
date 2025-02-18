@@ -1,4 +1,5 @@
 # 🚀 Tech Mahindra
+![](https://github.com/AkashKobal/tech-mahindra/blob/main/Tech_Mahindra-Logo.wine.svg)
 ![](https://www.logo.wine/a/logo/Tech_Mahindra/Tech_Mahindra-Logo.wine.svg)
 
 ## 📌 Overview  
