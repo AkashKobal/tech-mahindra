@@ -1,6 +1,5 @@
 # 🚀 Tech Mahindra
 ![](https://github.com/AkashKobal/tech-mahindra/blob/main/Tech_Mahindra-Logo.wine.svg)
-![](https://www.logo.wine/a/logo/Tech_Mahindra/Tech_Mahindra-Logo.wine.svg)
 
 ## 📌 Overview  
 This repository contains all the learning resources, projects, and documentation from **Tech Mahindra IT Training**. It covers **Frontend, Backend, Database, and Web Services**, focusing on **Full Stack Java Development** and modern web technologies.  
