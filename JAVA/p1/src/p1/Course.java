@@ -1,11 +1,10 @@
 package p1;
-
 import java.util.Objects;
 
-public class Courses {
+public class Course {
 	private String courseid;
 	private String coursename;
-	private String credit;
+	private int credit;
 	private String ctype;
 	public String getCourseid() {
 		return courseid;
@@ -19,10 +18,10 @@ public class Courses {
 	public void setCoursename(String coursename) {
 		this.coursename = coursename;
 	}
-	public String getCredit() {
+	public int getCredit() {
 		return credit;
 	}
-	public void setCredit(String credit) {
+	public void setCredit(int credit) {
 		this.credit = credit;
 	}
 	public String getCtype() {
@@ -43,15 +42,23 @@ public class Courses {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Courses other = (Courses) obj;
+		Course other = (Course) obj;
 		return Objects.equals(courseid, other.courseid) && Objects.equals(coursename, other.coursename)
-				&& Objects.equals(credit, other.credit) && Objects.equals(ctype, other.ctype);
+				&& credit == other.credit && Objects.equals(ctype, other.ctype);
+	}
+	@Override
+	public String toString() {
+		return "Course [courseid=" + courseid + ", coursename=" + coursename + ", credit=" + credit + ", ctype=" + ctype
+				+ "]";
+	}
+	public Course(String courseid, String coursename, int credit, String ctype) {
+		this.courseid = courseid;
+		this.coursename = coursename;
+		this.credit = credit;
+		this.ctype = ctype;
+	}
+	public Course() {
 	}
 	
-	
-	
-	
-	
-	
-	
+
 }
