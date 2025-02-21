@@ -1,20 +1,19 @@
 package Repository;
 
 import java.util.Objects;
-
+import java.sql.*;
 import DataSource.MySqlDBConnection;
 import Model.Student;
 
-// Datasource   --  Configuration
-// JDBC calls 
-
-// this violates SOLID principle
+//DataSource-create-solved by configuration
+//JDBC calls-to call
+//this violates SOLID principles
 public class StudentRepository {
-	// get the datasourse object
-	//Injecting/wiring an object 
-	// @autowire
+	//get the datasource object
+	//injection of object
+	//@autowire
 	private MySqlDBConnection connection;
-	//alt shift s
+	
 
 	public StudentRepository(MySqlDBConnection connection) {
 		super();
@@ -24,13 +23,40 @@ public class StudentRepository {
 	public MySqlDBConnection getConnection() {
 		return connection;
 	}
+
 	public void setConnection(MySqlDBConnection connection) {
 		this.connection = connection;
 	}
-	public int insertStudent(Student s) {
-		
-		return 0;
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(connection);
 	}
-	
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		StudentRepository other = (StudentRepository) obj;
+		return Objects.equals(connection, other.connection);
+	}
+	public int insertStudent(Student s) {
+		try {
+			String sql="insert into student values(?,?,?,?,?)";	
+			PreparedStatement ps=connection.getConnection().prepareStatement(sql);
+			ps.setString(1, s.getSid());
+			ps.setString(2, s.getSname());
+			ps.setString(3, s.getEmail());
+			ps.setString(4, s.getAddress());
+			ps.setLong(5, s.getYear());
+			int r=ps.executeUpdate();
+		}catch(Exception e) {}
+		return 0;
+		
+	}
 
 }
