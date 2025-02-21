@@ -1,0 +1,228 @@
+    html {
+        background-color: #f0f0f0;
+    }
+
+    #2 {
+        font-size: 16px;
+    }
+
+    .navbar-brand {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    [lang="en"] {
+        color: #00698f;
+    }
+
+    a:hover {
+        color: #008000;
+    }
+
+    ::before {
+        content: " ";
+        display: block;
+        height: 20px;
+        margin-top: -20px;
+        visibility: hidden;
+    }
+
+    .navbar-nav > li {
+        margin-right: 20px;
+    }
+
+    .navbar-nav + .d-flex {
+        margin-top: 20px;
+    }
+
+    .navbar-nav ~ .d-flex {
+        margin-top: 20px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .navbar-brand, .navbar-nav, .d-flex {
+        font-family: Arial, sans-serif;
+    }
+
+    .navbar-nav > li > a {
+        text-decoration: none;
+    }
+
+    :not(.navbar-brand) {
+        font-size: 14px;
+    }
+
+    :empty {
+        display: none;
+    }
+
+    :target {
+        background-color: #f0f0f0;
+    }
+
+    :enabled {
+        cursor: pointer;
+    }
+
+    :disabled {
+        cursor: not-allowed;
+    }
+
+    :checked {
+        background-color: #008000;
+    }
+
+    :root {
+        --primary-color: #00698f;
+    }
+
+    .navbar-nav li:nth-child(2) {
+        background-color: #f0f0f0;
+    }
+
+    .navbar-nav li:nth-last-child(2) {
+        background-color: #f0f0f0;
+    }
+
+    .navbar-nav li:nth-of-type(2) {
+        background-color: #f0f0f0;
+    }
+
+    .navbar-nav li:nth-last-of-type(2) {
+        background-color: #f0f0f0;
+    }
+
+    .navbar-nav li:first-child {
+        background-color: #f0f0f0;
+    }
+
+    .navbar-nav li:last-child {
+        background-color: #f0f0f0;
+    }
+
+    .navbar-nav li:first-of-type {
+        background-color: #f0f0f0;
+    }
+
+    .navbar-nav li:last-of-type {
+        background-color: #f0f0f0;
+    }
+
+    .navbar-nav li:only-child {
+        background-color: #f0f0f0;
+    }
+
+    .navbar-nav li:only-of-type {
+        background-color: #f0f0f0;
+    }
+
+    .navbar-nav li:empty {
+        display: none;
+    }
+
+    a:link {
+        color: #00698f;
+    }
+
+    a:visited {
+        color: #008000;
+    }
+
+    a:active {
+        color: #ff0000;
+    }
+
+    a:focus {
+        color: #008000;
+    }
+
+    
+    a:hover {
+        color: #008000;
+    }
+
+    [lang="en"] {
+        color: #00698f;
+    }
+
+    [dir="ltr"] {
+        direction: ltr;
+    }
+
+    :not(.navbar-brand) {
+        font-size: 14px;
+    }
+
+    :has(.navbar-nav) {
+        background-color: #f0f0f0;
+    }
+
+    :is(.navbar-brand, .navbar-nav) {
+        font-family: Arial, sans-serif;
+    }
+
+    :where(.navbar-brand, .navbar-nav) {
+        font-family: Arial, sans-serif;
+    }
+
+    :current {
+        background-color: #f0f0f0;
+    }
+
+    :past {
+        background-color: #f0f0f0;
+    }
+
+    :future {
+        background-color: #f0f0f0;
+    }
+
+    :defined {
+        background-color: #f0f0f0;
+    }
+    :host {
+        background-color: #f0f0f0;
+    }
+
+    :host-context(.navbar-brand) {
+        background-color: #f0f0f0;
+    }
+
+    :host(.navbar-brand) {
+        background-color: #f0f0f0;
+    }
+
+    ::slotted(.navbar-brand) {
+        background-color: #f0f0f0;
+    }
+
+    ::part(.navbar-brand) {
+        background-color: #f0f0f0;
+    }
+
+    ::shadow-link(.navbar-brand) {
+        background-color: #f0f0f0;
+    }
+
+    ::shadow-visited(.navbar-brand) {
+        background-color: #f0f0f0;
+    }
+
+    ::shadow-active(.navbar-brand) {
+        background-color: #f0f0f0;
+    }
+
+    ::shadow-hover(.navbar-brand) {
+        background-color: #f0f0f0;
+    }
+
+    ::shadow-focus(.navbar-brand) {
+        background-color: #f0f0f0;
+    }
+
+    ::shadow-target(.navbar-brand) {
+        background-color: #f0f0f0;
+    }

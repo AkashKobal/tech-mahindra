@@ -4,16 +4,16 @@ import java.io.Serializable;
 import java.util.Objects;
 
 public class Student implements Serializable {
-	private String sid;
+	private int sid;
 	private String sname;
 	private String email;
 	private String address;
 	private int year;
 	//alt shift s
-	public String getSid() {
+	public int getSid() {
 		return sid;
 	}
-	public void setSid(String sid) {
+	public void setSid(int sid) {
 		this.sid = sid;
 	}
 	public String getSname() {
@@ -61,7 +61,7 @@ public class Student implements Serializable {
 		return "Student [sid=" + sid + ", sname=" + sname + ", email=" + email + ", address=" + address + ", year="
 				+ year + "]";
 	}
-	public Student(String sid, String sname, String email, String address, int year) {
+	public Student(int sid, String sname, String email, String address, int year) {
 		super();
 		this.sid = sid;
 		this.sname = sname;
