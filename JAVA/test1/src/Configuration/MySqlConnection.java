@@ -9,6 +9,7 @@ public class MySqlConnection {
 	public MySqlConnection() throws Exception {
 	    Class.forName("com.mysql.cj.jdbc.Driver");
 	    System.out.println("Driver loaded");
+//	    connection = DriverManager.getConnection("jdbc:mysql://192.168.209.186:3308/test1","admin","admin@123");
 	    connection = DriverManager.getConnection("jdbc:mysql://localhost:3308/test1","root","Akash@123");
 	    System.out.println("Connection established");
 	}

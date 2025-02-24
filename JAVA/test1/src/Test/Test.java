@@ -14,7 +14,7 @@ public class Test {
 			TestServiceIMPL testServiceIMPL = new TestServiceIMPL(testRepository);
 			TestController testController = new TestController(testServiceIMPL);
 			
-			TestModel testModel = new TestModel(2, "Test");
+			TestModel testModel = new TestModel(7, "Test");
 			int result = testController.insertTest(testModel);
 			System.out.println("Result value = "+result);
 			
