@@ -1,0 +1,17 @@
+package Section7_Oops;
+
+public class Main {
+	
+	
+	public static void main(String[] args) {
+		System.out.println("OOPS Concepts in Java");
+		
+		Student akash = new Student();
+		System.out.println("Name: " + akash.name);
+		System.out.println("Age: " + akash.age);
+		System.out.println("Roll No: " + akash.rollNo);
+		System.out.println("Branch: " + akash.branch);
+		
+	}
+
+}

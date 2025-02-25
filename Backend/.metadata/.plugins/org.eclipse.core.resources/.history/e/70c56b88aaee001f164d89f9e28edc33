@@ -1,0 +1,43 @@
+package Section7_Oops;
+
+public class Constructor {
+	
+	public String name;
+	public int rollNo;
+	public int marks;
+	public String result;
+	
+	
+	// Default Constructor is used to assign default values to instance variables while creating object from other class
+	public Constructor() {
+		name= "Akash";
+		rollNo= 101;
+		marks= 80;
+		result= "Pass";
+	
+	}
+	
+	
+	// Parameter Constructor is used to assign new values to instance variables while creating object from other class
+	public Constructor(String name, int rollNo, int marks, String result) {
+		this.name = name;
+		this.rollNo = rollNo;
+		this.marks = marks;
+		this.result = result;
+	}
+	
+	public static void main(String[] args) {
+		
+		System.out.println("Constructors in Java");
+		Constructor student = new Constructor();
+		System.out.println("Name: "+student.name);
+		System.out.println("Roll No: "+student.rollNo);
+		System.out.println("Marks: "+student.marks);
+		System.out.println("Result: "+student.result);
+		
+		Constructor student2 = new Constructor("Amit", 102, 90, "Pass");
+		System.out.println(student2.name);
+		
+	}
+
+}

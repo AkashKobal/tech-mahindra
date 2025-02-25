@@ -1,0 +1,8 @@
+package Section4_Methods;
+
+public class MethodsInJava {
+	public static void main(String[] args) {
+		System.out.println("Methods in Java");
+	}
+
+}

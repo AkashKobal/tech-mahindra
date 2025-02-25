@@ -1,0 +1,16 @@
+package Section4_Methods;
+
+public class MethodsInJava {
+	public static void loops(int start, int end) {
+		for (int i = start; i <= end; i++) {
+			System.out.println(i);
+		}
+
+	}
+
+	public static void main(String[] args) {
+		System.out.println("Methods in Java");
+		loops(1, 10);
+	}
+
+}

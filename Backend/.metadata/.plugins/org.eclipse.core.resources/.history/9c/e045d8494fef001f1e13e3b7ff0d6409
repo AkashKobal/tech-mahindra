@@ -1,0 +1,16 @@
+package Service;
+
+import java.util.List;
+
+import p1.Course;
+
+public interface CourseService {
+	public int insertCourse(Course s);
+	public int updateCourse(Course s, Course id);
+	public int deleteCourse(Course s);
+	
+	
+	public List<Course> fetchAll();
+	
+	public Course fetchOneCourse(Course s);
+}

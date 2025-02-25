@@ -1,0 +1,38 @@
+package UnitTest;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+
+import Controller.StudentController;
+import Model.Student;
+import Service.StudentServiceIMPL;
+
+public class StudentControllerTest {
+
+	private StudentServiceIMPL service;
+	private StudentController controller;
+
+	@BeforeEach
+	void setUp() {
+		service = new StudentServiceIMPL(); // Manually creating the service instance
+		controller = new StudentController(service);
+	}
+
+	@Test
+	void insertStudent() {
+		// Creating a sample student object
+		Student student = new Student();
+		student.setSid(10);
+		student.setSname("Jerin");
+		student.setYear(2021);
+
+		// Inserting student and getting the result
+		int result = controller.insertStudent(student);
+
+		// Assuming service.insertStudent() returns 1 on successful insertion
+		assertEquals(1, result, "Student insertion success!");
+	}
+}

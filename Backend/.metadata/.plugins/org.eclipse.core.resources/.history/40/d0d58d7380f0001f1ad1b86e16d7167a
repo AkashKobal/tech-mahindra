@@ -1,0 +1,19 @@
+package Controller;
+
+import Model.Student;
+import Service.CourseServiceIMPL;
+import Service.StudentServiceIMPL;
+
+public class CourseController {
+	
+    private CourseServiceIMPL service;
+
+    // Constructor Injection
+    public CourseController(CourseServiceIMPL courseservice) {
+        this.service = courseservice;
+    }
+
+    public int insertStudent(Course c) {
+        return service.insertStudent(c);  // Pass 's' instead of 'null'
+    }
+}

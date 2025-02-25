@@ -1,0 +1,19 @@
+package Controller;
+
+import Model.TestModel;
+import Repositiry.TestRepository;
+import Service.TestServiceIMPL;
+
+public class TestController {
+	private TestRepository repository;
+
+	// Constructor Injection
+	public TestController(TestServiceIMPL testServiceIMPL) {
+		this.repository = testServiceIMPL;
+	}
+
+	public int insertTest(TestModel t) {
+		return repository.insertTest(t); // Pass 't' instead of 'null'
+	}
+
+}

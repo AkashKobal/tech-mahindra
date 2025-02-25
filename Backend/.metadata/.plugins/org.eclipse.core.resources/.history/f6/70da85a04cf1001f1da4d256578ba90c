@@ -1,0 +1,9 @@
+package Service;
+
+public class TestService {
+	
+	interface TestService {
+		public int insertTest(TestModel t);
+	}
+
+}
