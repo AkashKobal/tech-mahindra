@@ -11,7 +11,7 @@ public class StudentServiceIMPL {
         this.repository = repository;
     }
 
-    public int insertStudent(Student s) {
+	public int insertStudent(Student s) {
         return repository.insertStudent(s);  // Ensure repository is properly initialized
     }
 }
