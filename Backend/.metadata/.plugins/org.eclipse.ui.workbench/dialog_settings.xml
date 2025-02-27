@@ -30,4 +30,8 @@
 			<item value="copilot"/>
 		</list>
 	</section>
+	<section name="ImportExportAction">
+		<section name="ImportExportWizard.dialogBounds">
+		</section>
+	</section>
 </section>

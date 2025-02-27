@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\Admin\Desktop\TechMahindra\Backend\SMS\src\UnitTest\UnitTest.java"/>
 			<item value="C:\Users\Admin\Desktop\TechMahindra\JAVA\Udemy\src\Section1\helloWorld.java"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -26,12 +27,15 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.akashkobal.sms"/>
 			<item value="section1.section1"/>
 		</list>
 		<list key="groupId">
+			<item value="com.akashkobal"/>
 			<item value="section1"/>
 		</list>
 		<list key="artifactId">
+			<item value="sms"/>
 			<item value="section1"/>
 		</list>
 		<list key="projectNameTemplate">
