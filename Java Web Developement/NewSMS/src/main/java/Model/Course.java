@@ -6,7 +6,8 @@ public class Course {
 	private String courseid;
 	private String coursename;
 	private int credit;
-	private String ctype;
+	private String coursetype;
+	
 	public String getCourseid() {
 		return courseid;
 	}
@@ -25,15 +26,15 @@ public class Course {
 	public void setCredit(int credit) {
 		this.credit = credit;
 	}
-	public String getCtype() {
-		return ctype;
+	public String getCoursetype() {
+		return coursetype;
 	}
-	public void setCtype(String ctype) {
-		this.ctype = ctype;
+	public void setCoursetype(String coursetype) {
+		this.coursetype = coursetype;
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(courseid, coursename, credit, ctype);
+		return Objects.hash(courseid, coursename, credit, coursetype);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -45,18 +46,18 @@ public class Course {
 			return false;
 		Course other = (Course) obj;
 		return Objects.equals(courseid, other.courseid) && Objects.equals(coursename, other.coursename)
-				&& credit == other.credit && Objects.equals(ctype, other.ctype);
+				&& credit == other.credit && Objects.equals(coursetype, other.coursetype);
 	}
 	@Override
 	public String toString() {
-		return "Course [courseid=" + courseid + ", coursename=" + coursename + ", credit=" + credit + ", ctype=" + ctype
+		return "Course [courseid=" + courseid + ", coursename=" + coursename + ", credit=" + credit + ", coursetype=" + coursetype
 				+ "]";
 	}
-	public Course(String courseid, String coursename, int credit, String ctype) {
+	public Course(String courseid, String coursename, int credit, String coursetype) {
 		this.courseid = courseid;
 		this.coursename = coursename;
 		this.credit = credit;
-		this.ctype = ctype;
+		this.coursetype = coursetype;
 	}
 	public Course() {
 	}

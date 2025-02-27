@@ -36,7 +36,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/Project/Java Full Stack Web Developement GitHub/mysql-connector-j-8.3.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="D:/Project/Java Full Stack Web Developement GitHub/mysql-connector-j-8.3.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

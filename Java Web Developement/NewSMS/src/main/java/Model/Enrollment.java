@@ -3,13 +3,14 @@ package Model;
 import java.util.Objects;
 
 public class Enrollment {
-	private String studid;
+	private int sid;
 	private String courseid;
-	public String getStudid() {
-		return studid;
+	
+	public int getSid() {
+		return sid;
 	}
-	public void setStudid(String studid) {
-		this.studid = studid;
+	public void setSid(int sid) {
+		this.sid = sid;
 	}
 	public String getCourseid() {
 		return courseid;
@@ -19,7 +20,7 @@ public class Enrollment {
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(courseid, studid);
+		return Objects.hash(courseid, sid);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -30,18 +31,20 @@ public class Enrollment {
 		if (getClass() != obj.getClass())
 			return false;
 		Enrollment other = (Enrollment) obj;
-		return Objects.equals(courseid, other.courseid) && Objects.equals(studid, other.studid);
+		return Objects.equals(courseid, other.courseid) && Objects.equals(sid, other.sid);
 	}
-	@Override
-	public String toString() {
-		return "Enrollment [studid=" + studid + ", courseid=" + courseid + "]";
-	}
-	public Enrollment(String studid, String courseid) {
-		this.studid = studid;
+	public Enrollment(int sid, String courseid) {
+		super();
+		this.sid = sid;
 		this.courseid = courseid;
 	}
+	
 	public Enrollment() {
+		super();
 	}
+	
+	
+
 	
 	
 }
