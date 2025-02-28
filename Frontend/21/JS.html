@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="helloWorld"></p>
+    <h1 id="name"></h1>
+    <h2 id="age"></h2>
+    <h1 id="age2"></h1>
+    <button onclick="changeTest()"> Click me </button>
+
+    <hr> <br>
+    <p id="demo"></p>
+    <script>
+
+        const helloWorld = document.getElementById('helloWorld');
+        helloWorld.innerHTML = 'Hello World';
+        const name = document.getElementById('name');
+        name.innerHTML = 'Name: Akash';
+        const age = document.getElementById('age');
+        age.innerHTML = 'Age: 22';
+        document.write("Akash Kobal")
+        console.log("This is the Output")
+        document.getElementById("demo").innerHTML =5+6;
+
+        // checking floor and sealing numbers
+        let num = 5.567;
+        let num1 = 5.467;
+
+        // taking input from user using different methods
+        let age1 = prompt("Enter your age");
+        document.getElementById("age2").innerHTML = age1;
+        alert("Your age is: " + age1);
+        
+
+        
+        // printing the output
+        document.write(name1 + "<br>");
+        document.write(age1 + "<br>");
+
+
+        document.write(Math.floor(num) + "<br>");
+        document.write(Math.ceil(num) + "<br>");
+        document.write(Math.round(num) + "<br>");
+        
+        document.write(Math.floor(num1) + "<br>");
+        document.write(Math.ceil(num1) + "<br>");
+        document.write(Math.round(num1) + "<br>");
+
+
+
+        
+        function changeTest(){
+            helloWorld.innerHTML = 'Hello World';
+            name.innerHTML = 'Name: Kobal';
+            age.innerHTML = 'Age: 23';
+            helloWorld.style.background = 'green';
+            window.alert("This is an alert box");
+          
+        }
+
+    </script>
+</body>
+</html>
