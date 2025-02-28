@@ -3,6 +3,11 @@ import org.junit.platform.console.ConsoleLauncher;
 
 public class TestRunner {
     public static void main(String[] args) {
-        ConsoleLauncher.main(new String[]{"--select-class", "UnitTest.StudentControllerTest3"});
+        ConsoleLauncher.main(new String[]{"--select-class", 
+        		"UnitTest.StudentControllerTest",
+        		"--select-class",
+        		"UnitTest.CourseControllerTest"
+        		
+        });
     }
 }

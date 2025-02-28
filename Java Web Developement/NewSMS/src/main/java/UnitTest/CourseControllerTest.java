@@ -29,7 +29,7 @@ public class CourseControllerTest {
 
     @Test
     public void testInsertCourse() {
-    	Course c=new Course("5000","JAVA",3,"Core");
+    	Course c=new Course("7400","JAVA",3,"Core");
     	assertNotNull(c);  // Modify assertion as needed
         int result=courseController.insertCourse(c);
         System.out.println("Course inserted successfully");

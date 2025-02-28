@@ -29,7 +29,7 @@ public class EnrollmentControllerTest {
 
     @Test
     public void testInsertEnrollment() {
-    	Enrollment e=new Enrollment(5,"5001");
+    	Enrollment e=new Enrollment(50,"CSE1001");
     	assertNotNull(e);  // Modify assertion as needed
         int result = enrollmentController.insertEnrollment(e);
         System.out.println("Enrollment inserted successfully");

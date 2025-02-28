@@ -12,7 +12,7 @@ import Model.Student;
 import Repository.StudentRepository;
 import Service.StudentServiceImpl;
 
-public class StudentControllerTest3 {
+public class StudentControllerTest {
 
     private MySqlDBConnection connection;
 	private StudentRepository repository;
@@ -29,11 +29,12 @@ public class StudentControllerTest3 {
 
     @Test
     public void testInsertStudent() {
-    	Student s=new Student("3012","akash","akash@gmail.com","Kalaburagi",2021);
-    	assertNotNull(s);  // Modify assertion as needed
-        int result=studentController.insertStudent(s);
+    	Student e=new Student("1001","john","john@gmail.com","Mumbai",2021);
+    	assertNotNull(e);  // Modify assertion as needed
+        int result = studentController.insertStudent(e);
+        System.out.println("Student inserted successfully");
         assertEquals(1, result, "Student insertion success!");
-        // Assert that student was inserted
+        // Assert that Enrollment was inserted
         
     }
 }
