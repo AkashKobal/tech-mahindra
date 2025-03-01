@@ -3,7 +3,7 @@ content_assist_category_order=org.eclipse.jdt.ui.templateProposalCategory\:0\u00
 content_assist_disabled_computers=org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000
 content_assist_favorite_static_members=org.junit.Assert.*;org.junit.Assume.*;org.junit.jupiter.api.Assertions.*;org.junit.jupiter.api.Assumptions.*;org.junit.jupiter.api.DynamicContainer.*;org.junit.jupiter.api.DynamicTest.*;org.mockito.ArgumentMatchers.*;org.mockito.Mockito.*;org.assertj.core.api.Assertions.*;org.eclipse.swtbot.swt.finder.matchers.WidgetMatcherFactory.*;org.hamcrest.Matchers.*;org.hamcrest.MatcherAssert.*;org.eclipse.swtbot.eclipse.finder.matchers.WidgetMatcherFactory.*;org.eclipse.swtbot.swt.finder.finders.UIThreadRunnable.*;org.eclipse.swtbot.swt.finder.SWTBotAssert.*;org.eclipse.swtbot.eclipse.finder.waits.Conditions.*;org.eclipse.swtbot.swt.finder.waits.Conditions.*
 content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="Section7_Oops.Constructor"><rhs name\="Section7_Oops.Constructor"/></lhs><lhs name\="Service.StudentService"><rhs name\="Service.StudentServiceIMPL"/></lhs><lhs name\="Service.StudentServiceIMPL"><rhs name\="Service.StudentServiceIMPL"/></lhs><lhs name\="Repository.CourseRepository"><rhs name\="Repository.CourseRepository"/></lhs><lhs name\="Repositiry.TestRepository"><rhs name\="Repositiry.TestRepository"/></lhs><lhs name\="Service.TestServiceIMPL"><rhs name\="Service.TestServiceIMPL"/></lhs></history>
-content_assist_number_of_computers=26
+content_assist_number_of_computers=16
 eclipse.preferences.version=1
 markOccurrences=false
 org.eclipse.jdt.ui.formatterprofiles.version=23

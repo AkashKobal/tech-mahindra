@@ -14,7 +14,7 @@ import Service.StudentServiceImpl;
 public class Test {
 	public static void main(String[] args) throws Exception{
 		MySqlDBConnection connection=new MySqlDBConnection();
-		Student s=new Student("1009","amith","Amith@gmail.com","Hyderabad",2021);
+//		Student s=new Student("1009","amith","Amith@gmail.com","Hyderabad",2021);
 		StudentRepository repository=new StudentRepository(connection);
 		StudentServiceImpl service=new StudentServiceImpl(repository);
 		StudentController controller=new StudentController(service);
@@ -28,7 +28,7 @@ public class Test {
 		//which collection for course, student->List,Set	
 		//which collection for Enrollment - Map
 		System.out.println("Using Iterator");
-		ListIterator itr=studentlist.listIterator();
+		ListIterator<Student> itr=studentlist.listIterator();
 		while(itr.hasNext()) {
 			System.out.println(itr.next());
 		}

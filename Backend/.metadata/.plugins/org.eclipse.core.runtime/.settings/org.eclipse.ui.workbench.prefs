@@ -22,14 +22,11 @@ org.eclipse.mylyn.wikitext.ui.presentation.textFont=1|Consolas|16.0|0|WINDOWS|1|
 org.eclipse.pde.internal.ui.compare.ManifestContentMergeViewer=1|Consolas|16.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Consolas;
 org.eclipse.pde.internal.ui.compare.PluginContentMergeViewer=1|Consolas|16.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Consolas;
 org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<org.eclipse.ui.commands>\r\n<keyBinding commandId\="org.eclipse.ui.edit.text.zoomIn" contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+NUMPAD_ADD"/>\r\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+\="/>\r\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+-"/>\r\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+-"/>\r\n<keyBinding commandId\="org.eclipse.ui.edit.text.zoomOut" contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+NUMPAD_SUBTRACT"/>\r\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL++"/>\r\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL++"/>\r\n</org.eclipse.ui.commands>
-org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_BG_END=41,41,41
-org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_BG_START=43,44,45
+org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_BG_START=37,41,45
 org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_TEXT_COLOR=204,204,204
-org.eclipse.ui.workbench.ACTIVE_TAB_BG_END=41,41,41
-org.eclipse.ui.workbench.ACTIVE_TAB_BG_START=43,44,45
+org.eclipse.ui.workbench.ACTIVE_TAB_BG_START=37,41,45
 org.eclipse.ui.workbench.ACTIVE_TAB_TEXT_COLOR=221,221,221
-org.eclipse.ui.workbench.INACTIVE_TAB_BG_END=49,53,56
-org.eclipse.ui.workbench.INACTIVE_TAB_BG_START=59,64,66
+org.eclipse.ui.workbench.INACTIVE_TAB_BG_START=53,60,65
 org.eclipse.ui.workbench.INACTIVE_TAB_TEXT_COLOR=187,187,187
 org.eclipse.wst.sse.ui.textfont=1|Consolas|16.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Consolas;
 showCommandKeysForKeyboard=true

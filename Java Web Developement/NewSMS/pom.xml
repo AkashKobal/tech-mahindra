@@ -21,11 +21,6 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-    	<groupId>com.akashkobal</groupId>
-    	<artifactId>mavendemo</artifactId>
-    	<version>0.0.1-SNAPSHOT</version>
-    </dependency>
      <!-- JUnit Jupiter API -->
     <dependency>
         <groupId>org.junit.jupiter</groupId>
