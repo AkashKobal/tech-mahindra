@@ -26,8 +26,9 @@ public class SiteController extends HttpServlet {
 			request.getSession().invalidate(); // first invalidate the session if any exists before creating a new one
 			HttpSession newSession = request.getSession();
 			newSession.setMaxInactiveInterval(500); // 50 seconds
-			Cookie cookie = new Cookie("name", name); // create a cookie (name,value)
-			response.addCookie(cookie); // add the cookie to the response
+//			Cookie cookie = new Cookie("name", name); // create a cookie (name,value)
+//			response.addCookie(cookie); // add the cookie to the response
+			newSession.setAttribute("name", name); // set the session attribute
 			
 			response.sendRedirect("member.jsp");
 		}
