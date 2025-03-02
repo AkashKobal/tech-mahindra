@@ -19,22 +19,18 @@ public class MemberController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String logout = req.getParameter("logout");
+		String action = req.getParameter("action");
 		
-		switch (logout) {
+		switch (action) {
 		case "logout":{
 			req.getSession().invalidate();
-			
-			/*
-			Cookie[] cookies = req.getCookies();
-			for (Cookie cookie : cookies) {
-				if (cookie.getName().equals("name")) {
-					cookie.setMaxAge(0);
-					resp.addCookie(cookie);
-				}
-			}
-			*/
-			resp.sendRedirect("login.jsp");
+			resp.sendRedirect(req.getContextPath()+"/SiteController?action=login");
+			break;
+		}
+		case "member":{
+			req.getRequestDispatcher("member.jsp").forward(req, resp);
+			break;
+
 		}
 		
 		}
