@@ -1,10 +1,10 @@
 package User;
 
-public class User {
+public class Form {
 	private String fname;
 	private String lname;
 	
-	public User() {
+	public Form() {
 		fname = "first";
 		lname = "last";
 		
