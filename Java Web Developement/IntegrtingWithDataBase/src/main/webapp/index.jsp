@@ -1,6 +1,4 @@
-<jsp:include page="/Components/NavBar.jsp">
-<jsp:param value="Homepage" name="titlepage" />
-</jsp:include>
+<jsp:include page="/Components/NavBar.jsp"/>
 
 <h1>Home Page</h1>
 
