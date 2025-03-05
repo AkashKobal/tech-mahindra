@@ -3,6 +3,7 @@ package Client;
 
 @FunctionalInterface
 interface X<T extends Number> {
+	
     public abstract void compare(T x, T y);
 }
 
