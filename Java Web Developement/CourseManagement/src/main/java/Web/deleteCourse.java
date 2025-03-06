@@ -11,44 +11,34 @@ import java.sql.SQLException;
 import Dao.CourseDao;
 import Model.Course;
 
-@WebServlet("/CourseServlet")
-public class CourseServlet extends HttpServlet {
+@WebServlet("/deleteCourse")
+public class deleteCourse extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    
-	private CourseDao dao;
-  
-    public CourseServlet() {
+	private CourseDao courseDAO;
+    public deleteCourse() {
         super();
-        try {
-			dao = new CourseDao();
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+        // TODO Auto-generated constructor stub
     }
 
+    @Override
+    public void init() throws ServletException {
+        try {
+            courseDAO = new CourseDao(); // Initialize DAO in init()
+        } catch (ClassNotFoundException | SQLException e) {
+            throw new ServletException(e); // Log error
+        }
+    }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
 		Course course = new Course();
-		course.setCoursename(request.getParameter("coursename"));
-		course.setDuration(Integer.parseInt(request.getParameter("duration")));
-		course.setFees(Integer.parseInt(request.getParameter("fees")));	
-		course.setCategory(request.getParameter("category"));
+		course.setCourseid(Integer.parseInt(request.getParameter("courseid")));
 		
 		String courseid = request.getParameter("courseid");
 		if (courseid == null || courseid.isEmpty()) {
-			dao.addCourse(course);
-			
-		}
-		else {
+			courseDAO.deleteCourse(course);
+		} else {
 			course.setCourseid(Integer.parseInt(courseid));
-//			dao.updateCourse(course);
 		}
-	
 	}
 
 }

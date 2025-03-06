@@ -2,6 +2,12 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%
+if (request.getAttribute("listCourse") == null) {
+    response.sendRedirect("viewCourses");
+    return;
+}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,10 +45,10 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="index.html"
+						aria-current="page" href="add.jsp"
 						style="color: white; font-size: 17px;">Add Course</a></li>
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="" style="color: white; font-size: 17px;">View
+						aria-current="page" href="" style="color: white; font-size: 17px;" action="CourseServlet">View
 							Course</a></li>
 				</ul>
 
@@ -78,10 +84,10 @@
 					<td scope="col"><%= course.getCategory() %></td>
 					<td scope="col"><%= course.getDuration() %></td>
 					<td scope="col"><%= course.getFees() %></td>
-					<td scope="col"><a href="#"><i class="fa fa-trash"
-							aria-hidden="true"></i></a> <a href="#"><i class="fa fa-eye"
-							aria-hidden="true"></i></a> <a href="#"><i class="fa fa-edit"
-							aria-hidden="true"></i></a></td>
+					<td scope="col">
+					<a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a> 
+					<a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a> 
+					<a href="#"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
 				</tr>
 				<%
                 }

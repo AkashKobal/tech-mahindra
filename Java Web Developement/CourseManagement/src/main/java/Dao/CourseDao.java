@@ -64,6 +64,8 @@ public class CourseDao {
 		return courses;
 
 	}
+	
+		
 
 	public static void main(String[] args) {
 		try {
@@ -75,6 +77,18 @@ public class CourseDao {
 
 		}
 
+	}
+
+	public void deleteCourse(int course) {
+		try {
+			PreparedStatement ps = connection.prepareStatement("DELETE FROM course WHERE courseid = ?");
+			ps.setInt(1, course);
+			ps.executeUpdate();
+			System.out.println("Course Deleted Successfully");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}		
 	}
 
 }

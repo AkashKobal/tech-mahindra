@@ -33,10 +33,10 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="#"
+						aria-current="page" href="add.jsp"
 						style="color: white; font-size: 17px;">Add Course</a></li>
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="view.html"
+						aria-current="page" href="viewCourses"
 						style="color: white; font-size: 17px;">View Course</a></li>
 				</ul>
 
