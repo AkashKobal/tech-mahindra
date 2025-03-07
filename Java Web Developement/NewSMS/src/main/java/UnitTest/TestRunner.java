@@ -6,8 +6,7 @@ public class TestRunner {
         ConsoleLauncher.main(new String[]{"--select-class", 
         		"UnitTest.StudentControllerTest",
         		"--select-class",
-        		"UnitTest.CourseControllerTest"
-        		
+        		"UnitTest.CourseControllerTest",        		
         });
     }
 }

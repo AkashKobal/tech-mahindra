@@ -26,10 +26,11 @@ public class Assessment {
 		Shape s = new Triangle();
 		System.out.println("Area is:" + s.area(4, 6));
 		
-		 BiFunction<Integer, Integer, Double> triangleArea = (b, h) -> 0.5 * b * h;
+		 BiFunction<Double, Double, Double> triangleArea = (b, h) -> 0.5 * b * h;
 
-	     System.out.println("Area using BiFunction is: " + triangleArea.apply(4, 6));
+	     System.out.println("Area using BiFunction is: " + triangleArea.apply(4.56, 6.59));
 
 	}
+	
 
 }

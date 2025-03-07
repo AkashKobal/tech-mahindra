@@ -28,8 +28,5 @@ public class BasicDemo2 {
         };
         r3.compare(5.6, 3.2);
         
-    }
-    
-    
-    
+    }  
 }
