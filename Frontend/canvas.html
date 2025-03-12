@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Example</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Canvas Example</h1>
+        <p>Draw on the canvas by clicking and dragging the mouse</p>
+    </header>
+    <article>
+        <h2>Canvas</h2>
+        <canvas id="myCanvas" width="1800" height="600" onmousedown="startDrawing(event)" onmousemove="drawLine(event)"
+            onmouseup="stopDrawing(event)" onclick="moveDot()"></canvas>
+        <h6>Select color</h6>
+        <select id="mySelect" title="dropdown" onchange="changeColor()">
+            <option value="black">Black</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+            <option value="purple">Purple</option>
+            <option value="orange">Orange</option>
+            <option value="pink">Pink</option>
+            <option value="brown">Brown</option>
+            <option value="grey">Grey</option>
+
+        </select>
+        <button type="button" id="reset" onclick="resetCanvas()">Reset</button>
+        <button type="button" id="button" onclick="undoCanvas()">Undo</button>
+        <select id="selectNoOfDots"  title="dropdown" onchange="selectNoOfDots()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+
+
+    </article>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        var isDrawing = false;
+        var dotX, dotY;
+
+
+
+        function resetCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+        function moveDot() {
+            dotX = Math.random() * 1800;
+            dotY = Math.random() * 600;
+            dotA = Math.random() * 1800;
+            dotB = Math.random() * 600;
+            drawDot(dotX,dotY);
+            drawDot(dotA,dotB);
+
+            
+        }
+
+        function drawDot(x,y,a,b) {
+            ctx.beginPath();
+            var dot1 = ctx.arc(x, y, 20, 0, 2 * Math.PI);
+            // var dot2 = ctx.arc(a , b, 10, 0, 2 * Math.PI);
+
+            // var dot1 = "S";
+            // create a square dot;
+            
+            ctx.fillStyle = document.getElementById("mySelect").value;
+            // changing color for each dot
+
+            // dot1.ctx.fillStyle = document.getElementById("mySelect").value;
+            // dot2.ctx.fillStyle = document.getElementById("mySelect").value;
+
+            ctx.fill();
+        }
+
+        function undoCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+
+        }
+
+        function startDrawing(event) {
+            isDrawing = true;
+            var x = event.clientX - canvas.offsetLeft;
+            var y = event.clientY - canvas.offsetTop;
+            ctx.beginPath();
+            // ctx.moveTo(x, y);
+        }
+
+        function drawLine(event) {
+            if (isDrawing) {
+                var x = event.clientX - canvas.offsetLeft;
+                var y = event.clientY - canvas.offsetTop;
+                ctx.lineWidth = 10;
+                ctx.strokeStyle = document.getElementById("mySelect").value;
+                ctx.lineCap = "round";
+                ctx.lineTo(x, y);
+                ctx.stroke();
+            }
+        }
+        function stopDrawing(event) {
+            isDrawing = false;
+        }
+
+        // function animateDot() {
+        //     ctx.clearRect(0, 0, canvas.width, canvas.height);
+        //     moveDot();
+        //     drawDot();
+        //     setTimeout(animateDot, 100);
+        // }
+        // animateDot();
+    </script>
+
+</body>
+
+</html>

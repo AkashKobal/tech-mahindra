@@ -1,4 +1,4 @@
-package Section7_Oops;
+package Section7_OOPS_Inheritance;
 
 public class Inheritance {
 	
@@ -11,8 +11,7 @@ public class Inheritance {
 	// 3. Hierarchical Inheritance: Multiple classes are derived from a single base class.
 	// 4. Multiple Inheritance: A class is derived from more than one class.
 	// 5. Hybrid Inheritance: A combination of two or more types of inheritance.
-	
-	
-	
+
 
 }
+

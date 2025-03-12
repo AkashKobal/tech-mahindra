@@ -69,6 +69,7 @@ public class Student implements Comparable<Student> {
 	public int compareTo(Student s) {
 		return Integer.compare(this.id, s.id);
 	}
+	
 
 	public static void main(String[] args) {
 		List<Student> list = new ArrayList<>();
@@ -93,5 +94,28 @@ public class Student implements Comparable<Student> {
 
 		System.out.println("\nSupplier output:");
 		System.out.println(newStudent);
+		
+		// Using forEach to print all students
+		System.out.println("Using forEach to print all students");
+		list.stream().forEach(System.out::println);
+		System.out.println("******************************");
+		
+		// Using function and  forEach to print all students
+		list.stream().forEach(x -> System.out.println(x));
+		System.out.println("******************************");
+
+		
+		// Using method reference to print all students
+		System.out.println("Using method reference to print all students");
+		list.stream().forEach(System.out::println);
+		System.out.println("******************************");
+		
+		// printing the length of each name
+		list.stream().forEach(System.out::println);
+
+
+		
 	}
+	
+	
 }
