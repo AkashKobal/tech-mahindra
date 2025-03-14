@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Function Examples</title>
+</head>
+<body>
+    <h2>Output:</h2>
+    <div id="demo"></div>
+
+    <script>
+        // 1. Named Function
+        function greet(name) {
+            return "Hello, " + name + "!";
+        }
+        console.log(greet("Alice")); // Output: Hello, Alice!
+
+        // 2. Anonymous Function
+        let sum = function(a, b) {
+            return a + b;
+        };
+        console.log(sum(5, 3)); // Output: 8
+
+        // 3. Arrow Function
+        const multiply = (a, b) => a * b;
+        console.log(multiply(4, 2)); // Output: 8
+
+        // 4. IIFE (Immediately Invoked Function Expression)
+        (function() {
+            console.log("This runs immediately!");
+        })();
+
+        // 5. Higher-Order Function Example
+        const numbers = [1, 2, 3, 4];
+        const doubled = numbers.map(num => num * 2);
+        console.log(doubled); // Output: [2, 4, 6, 8]
+
+        // 6. Callback Function Example
+        function fetchData(callback) {
+            setTimeout(() => {
+                callback("Data loaded!");
+            }, 1000);
+        }
+        fetchData(function(result) {
+            console.log(result); // Output after 1s: Data loaded!
+        });
+
+        // 7. Recursive Function
+        function factorial(n) {
+            if (n === 0) return 1;
+            return n * factorial(n - 1);
+        }
+        console.log(factorial(5)); // Output: 120
+
+        // 8. Synchronous Steps
+        function step1() {
+            console.log("Step 1: Starting process...");
+        }
+        function step2() {
+            console.log("Step 2: Processing data...");
+        }
+        function step3() {
+            console.log("Step 3: Finalizing process...");
+        }
+        step1();
+        step2();
+        step3();
+        console.log("All steps completed.");
+
+        // 9. Async Callback Example
+        function fetchDataWithSteps(callback) {
+            console.log("Step 1: Start fetching data...");
+            setTimeout(() => {
+                const data = "Step 2: Data fetched successfully!";
+                callback(data);
+            }, 2000);
+        }
+
+        function displayData(data) {
+            console.log(data);
+            console.log("Step 3: Process completed.");
+        }
+
+        fetchDataWithSteps(displayData);
+        console.log("This will run before data fetching completes!");
+
+        // 10. Promise with .then/.catch
+        function myDisplayer(some) {
+            document.getElementById("demo").innerHTML += some + "<br>";
+        }
+
+        let myPromise = new Promise((resolve, reject) => {
+            let x = 0;
+            if (x === 0) {
+                resolve("Step 1: OK");
+            } else {
+                reject("Error");
+            }
+        });
+
+        myPromise
+            .then(result => {
+                myDisplayer(result);
+                return "Step 2: Processed Data";
+            })
+            .then(result => {
+                myDisplayer(result);
+                return "Step 3: Final Step Completed";
+            })
+            .catch(error => myDisplayer(error))
+            .finally(() => myDisplayer("All steps completed."));
+
+        // 11. Promise.all Example
+        const promise1 = new Promise(resolve =>
+            setTimeout(() => resolve("Task 1: Data Loaded"), 2000)
+        );
+        const promise2 = new Promise(resolve =>
+            setTimeout(() => resolve("Task 2: API Fetched"), 1000)
+        );
+        const promise3 = new Promise(resolve =>
+            setTimeout(() => resolve("Task 3: Image Rendered"), 3000)
+        );
+
+        Promise.all([promise1, promise2, promise3])
+            .then(results => {
+                results.forEach(task => myDisplayer(task));
+                myDisplayer("All async tasks done.");
+            });
+    </script>
+</body>
+</html>

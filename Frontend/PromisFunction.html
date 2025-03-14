@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Async/Await + Promise Combined Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input {
+      padding: 8px;
+      margin: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+    }
+    #message, #result {
+      margin-top: 20px;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    #message {
+      color: red;
+    }
+    #result {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Login Form</h1>
+
+  <input type="text" id="username" placeholder="Enter username" />
+  <input type="password" id="password" placeholder="Enter password" />
+  <br>
+  <button onclick="handleLogin()">Login</button>
+
+  <div id="message"></div>
+
+  <hr style="margin: 40px 0;">
+
+  <h1>Async/Await with Promise Example</h1>
+  <button onclick="handleClick()">Click to Load Data</button>
+  <div id="result"></div>
+
+  <script>
+    // Fake login simulation with Promise
+    function fakeLogin(username, password) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (username === "admin" && password === "1234") {
+            resolve("✅ Login successful!");
+          } else {
+            reject("❌ Invalid credentials");
+          }
+        }, 1500);
+      });
+    }
+
+    // Handle login using async/await
+    async function handleLogin() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+      const messageDiv = document.getElementById("message");
+
+      messageDiv.textContent = "⏳ Verifying...";
+
+      try {
+        const result = await fakeLogin(user, pass);
+        messageDiv.textContent = result;
+        messageDiv.style.color = "green";
+      } catch (error) {
+        messageDiv.textContent = error;
+        messageDiv.style.color = "red";
+      }
+    }
+
+    // Simulate data loading with a Promise
+    function getData() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("✅ Data loaded successfully!");
+        }, 2000);
+      });
+    }
+
+    // Handle button click using async/await
+    async function handleClick() {
+      const resultDiv = document.getElementById("result");
+      resultDiv.textContent = "⏳ Loading...";
+      try {
+        const result = await getData();
+        resultDiv.textContent = result;
+      } catch (error) {
+        resultDiv.textContent = "❌ Error: " + error;
+      }
+    }
+  </script>
+
+</body>
+</html>

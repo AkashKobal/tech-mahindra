@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nothing in JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+      background: white;
+      padding: 15px;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h2>Exploring “Nothing” in JavaScript</h2>
+
+  <button onclick="showNaN()">NaN</button>
+  <button onclick="showNull()">null</button>
+  <button onclick="showUndefined()">undefined</button>
+  <button onclick="showNothing()">Nothing?</button>
+
+  <div id="output">Click a button to see what “nothing” looks like!</div>
+
+  <script>
+    function showNaN() {
+      let result = "hello" / 2;
+      document.getElementById("output").innerText = `NaN Example: "hello" / 2 = ${result}`;
+      console.log("NaN value:", result);
+    }
+
+    function showNull() {
+      let value = null;
+      document.getElementById("output").innerText = `null Example: value = ${value}`;
+      console.log("null value:", value);
+    }
+
+    function showUndefined() {
+      let value;
+      document.getElementById("output").innerText = `undefined Example: value = ${value}`;
+      console.log("undefined value:", value);
+    }
+
+    function showNothing() {
+      let value = ""; // empty string could be considered “nothing”
+      document.getElementById("output").innerText = `“Nothing” Example: value = "${value}" (empty string)`;
+      console.log("Nothing value (empty string):", value);
+    }
+  </script>
+</body>
+</html>

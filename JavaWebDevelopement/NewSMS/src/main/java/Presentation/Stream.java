@@ -22,12 +22,18 @@ public class Stream {
         students.stream()
                 .map(Student::getName)
                 .forEach(System.out::println);
+        
 
         // 2. Filter students with CGPA > 8
         System.out.println("\nStudents with CGPA > 8:");
         students.stream()
                 .filter(s -> s.getCgpa() > 8 )
                 .forEach(System.out::println);
+        
+        //        // 2. Filter students with CGPA < 8
+        System.out.println("\nStudents with CGPA < 8:");
+		students.stream().filter(s -> s.getCgpa() < 8).forEach(System.out::println);
+		
 
         // 3. Total number of students
         long count = students.stream().count();
@@ -84,5 +90,7 @@ public class Stream {
                 .distinct()
                 .collect(Collectors.toList());
         System.out.println("\nCourse IDs: " + courseIds);
+        
+        
     }
 }
